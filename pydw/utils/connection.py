@@ -41,6 +41,9 @@ class Connection:
         cursor.close()
         return res
 
+    def close(self):
+        self.conn.close()
+
 
 class MySQLConn(Connection):
     def __init__(self, conf):
